@@ -36,15 +36,20 @@ namespace GuessingGame
                     //break out of loop
                     break;
                 }
-                else if(i == 1)
+                else if(guess > secretNum)
                 {
-                    //else if its the last turn display the lose message
-                    Console.WriteLine("You Lose!");
+                    //if the guess is to high, tell the user
+                    Console.WriteLine("Too High!");
+                }
+                else if(i != 1)
+                {
+                    //if its not the last turn, tell the user the guess is too low
+                    Console.WriteLine("Too Low!");
                 }
                 else
                 {
-                    //otherwise display the failure message
-                    Console.WriteLine("Wrong!");
+                    //else display the lose message
+                    Console.WriteLine("You Lose!");
                 }
 
             }
