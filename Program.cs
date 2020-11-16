@@ -13,9 +13,9 @@ namespace GuessingGame
             int secreteNum = 42;
 
             //Give the user four chances
-            for (int i = 0; i < 4; i++)
+            for (int i = 1; i <= 4; i++)
             {
-                Console.Write("Your Guess: ");
+                Console.Write($"Guess {i}: ");
                 //save the guess
                 int guess = Int32.Parse(Console.ReadLine());
 
@@ -24,6 +24,8 @@ namespace GuessingGame
                 {
                     //if they are equal display success message
                     Console.WriteLine("You Win!");
+                    //break out of loop
+                    break;
                 }
                 else
                 {
