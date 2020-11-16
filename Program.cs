@@ -10,9 +10,27 @@ namespace GuessingGame
             Console.WriteLine("Guess the secret number!");
             Console.Write("Your Guess: ");
 
-            //save the guess and print it back to the screen
-            string guess = Console.ReadLine();
-            Console.WriteLine(guess);
+            //save the guess
+            int guess = Int32.Parse(Console.ReadLine());
+            //declare and init secretNum
+            int secreteNum = 42;
+
+            //compare the guess and secretNum
+            if(guess == secreteNum)
+            {
+                //if they are equal display success message
+                Console.WriteLine("You Win!");
+            }
+            else
+            {
+                //else display failure message
+                Console.WriteLine("You Lose!");
+            }
+            
+
+            
+
+            
         }
     }
 }
