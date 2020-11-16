@@ -8,29 +8,31 @@ namespace GuessingGame
         {
             //Prompt for a guess
             Console.WriteLine("Guess the secret number!");
-            Console.Write("Your Guess: ");
 
-            //save the guess
-            int guess = Int32.Parse(Console.ReadLine());
             //declare and init secretNum
             int secreteNum = 42;
 
-            //compare the guess and secretNum
-            if(guess == secreteNum)
+            //Give the user four chances
+            for (int i = 0; i < 4; i++)
             {
-                //if they are equal display success message
-                Console.WriteLine("You Win!");
-            }
-            else
-            {
-                //else display failure message
-                Console.WriteLine("You Lose!");
-            }
-            
+                Console.Write("Your Guess: ");
+                //save the guess
+                int guess = Int32.Parse(Console.ReadLine());
 
-            
+                //compare the guess and secretNum
+                if (guess == secreteNum)
+                {
+                    //if they are equal display success message
+                    Console.WriteLine("You Win!");
+                }
+                else
+                {
+                    //else display failure message
+                    Console.WriteLine("You Lose!");
+                }
+            }
 
-            
+
         }
     }
 }
